@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('FredokaOne-Regular.ttf') , format('typetrue');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  font-family: 'MyCustomFont', sans-serif;
+  background: linear-gradient(90deg, #000, #3b0066, #fff);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.game-container {
+  position: relative;
+}
+canvas {
+  border: 2px solid #fff;
+  background-image: url('back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.game-logo {
+  max-width: 1000px;
+  margin: 10px;
+}
+.top-logo {
+  margin-top: 20px;
+}
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 10px;
+}
+button {
+  background-color: #ffffff6e;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #6600eb;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.logo img {
+  max-width: 100%;
+  height: auto;
+  animation: glitch 1.5s infinite;
+}
+.description {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+.game-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  background: #1a1a1a;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #3b0066;
+  border-color: #3b0066;
+}
+@keyframes glitch {
+  0% {
+      transform: translate(0);
+  }
+  20% {
+      transform: translate(-2px, 2px);
+  }
+  40% {
+      transform: translate(2px, -2px);
+  }
+  60% {
+      transform: translate(-2px, -2px);
+  }
+  80% {
+      transform: translate(2px, 2px);
+  }
+  100% {
+      transform: translate(0);
+  }
+}
+#current-player {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.board div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  background-color: #4700778a;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+#main-menu-btn {
+  background-color: #3b0066;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#main-menu-btn:hover {
+  background-color: #55008f;
+}
+.button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}

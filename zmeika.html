@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Змейка</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+  <img src="game-logo.png" alt="Logo" class="game-logo top-logo">
+  </div></div>
+  
+  <div class="game-container">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+  </div>
+  
+  <div class="controls">
+    <span>Счёт: <span id="score">0</span></span>
+    <button id="restart">Рестарт</button>
+    <button id="main-menu">Главное меню</button>
+  </div>
+  
+
+  <script src="snake.js"></script>
+  <script>
+    document.getElementById('main-menu').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
